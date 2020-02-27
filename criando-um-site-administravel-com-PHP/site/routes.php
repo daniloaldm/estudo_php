@@ -1,3 +1,7 @@
 <?php
 
-echo "home";
+if ($path == '/'){
+    echo "site";
+}else{
+    echo "Página não encontrada";
+}
