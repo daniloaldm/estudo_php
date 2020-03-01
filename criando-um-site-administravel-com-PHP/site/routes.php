@@ -1,7 +1,9 @@
 <?php
 
-if ($path == '/'){
-    echo "site";
+if (resolve('/')){
+    echo "Home";
+}elseif(resolve('/contato')){
+    echo 'Página de contato';
 }else{
-    echo "Página não encontrada";
+    echo 'Página não encontrada';
 }
