@@ -15,7 +15,7 @@ if ($debug) {
     mysqli_report(MYSQLI_REPORT_OFF);
 }
 
-$conn = new mysqli('projetos.danilo', 'root', 'root', 'php_mysql_avancando');
+$conn = new mysqli('172.17.0.1', 'root', 'root', 'php_mysql_avancando');
 
 if ($conn->connect_errno) {
     die('Falhou em conectar: ' . $conn->connect_errno);
