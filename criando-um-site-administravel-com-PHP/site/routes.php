@@ -1,9 +1,9 @@
 <?php
 
 if (resolve('/')){
-    echo "Home";
-}elseif(resolve('/contato')){
-    echo 'Página de contato';
+    render ('site/home', 'site');
+}elseif(resolve('/contato') || resolve('/contato/')){
+    render ('site/contato', 'site');
 }else{
     echo 'Página não encontrada';
 }
