@@ -1,6 +1,6 @@
 <?php 
 
-$conn = new mysqli('172.17.0.1', 'root', 'root', 'pp_criando_site_com_php');
+$conn = new mysqli(DB_SERVER, DB_USER, DB_PASSWD, DB_NAME);
 if($conn->connect_errno){
     die('Falhou em conectar: (' . $conn->connect_errno . ') ' . $conn->connect_error);
 }else{
