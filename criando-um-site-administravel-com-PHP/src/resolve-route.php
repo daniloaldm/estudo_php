@@ -1,9 +1,13 @@
 <?php
 
-function resolve($route)
-{
+function resolve($route) {
     $path = $_SERVER['PATH_INFO'] ?? '/';
-    $route = '/^' . str_replace('/', '\/', $route) . '$/';
+
+    if (strlen($path) > 1) {
+        $path = rtrim($path, '/');
+    }
+
+    $route = '/^' . str_replace('/', '\/',$route) . '$/';
 
     if (preg_match($route, $path, $params)) {
         return $params;

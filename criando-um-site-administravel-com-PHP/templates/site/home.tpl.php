@@ -1,3 +1,3 @@
-<h3>Página Inicial</h3>
+<h3>Página inicial</h3>
 
-<a href=<?= dirname(basename(__DIR__)) . '/contato/'?>>Fale conosco</a>
+<a href="/contato">Fale conosco</a>
